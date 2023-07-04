@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "express": "^4.18.2",
-    "helmet": "^7.0.0"
+    "helmet": "^7.0.0",
+    "undici": "^5.22.1"
   },
   "optionalDependencies": {
     "@oceanicjs/builders": "^1.1.9"
