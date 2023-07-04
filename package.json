@@ -2,7 +2,8 @@
   "name": "personal-typescript-template",
   "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node ./Main.ts",
+    "dev": "ts-node-dev ./Main.ts"
   },
   "license": "UNLICENSED",
   "devDependencies": {
