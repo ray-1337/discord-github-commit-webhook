@@ -49,7 +49,7 @@ app.post("/:mortem", async (req, res) => {
       return res.status(403).send("invalid repository owner.")
     };
 
-    if (!ltdGitHubOwner?.length || !ltdGitHubOwner.some(ownerName => ownerName === body.repository.owner.name)) {
+    if (!ltdGitHubOwner?.length || !ltdGitHubOwner.some(ownerName => ownerName === body.repository.owner.login)) {
       return res.status(403).send("mismatched github repository owner.");
     };
 
