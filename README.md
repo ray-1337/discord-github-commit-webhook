@@ -1,2 +1,8 @@
-# TypeScript Project Template
-This is my personal TypeScript template. I used to keep it simple and minimal.
+## Discord & GitHub Commit Customized Webhook
+This is my personal GitHub Webhook handler.
+
+# Why?
+Discord shorten GitHub commits message, and I decided to make it longer and a bit fancier.
+
+# Project License
+[UNLICENSE](LICENSE)
