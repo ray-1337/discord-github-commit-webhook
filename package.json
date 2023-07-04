@@ -6,6 +6,7 @@
   },
   "license": "UNLICENSED",
   "devDependencies": {
+    "@octokit/webhooks-types": "^7.1.0",
     "@types/node": "^20.3.3",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
