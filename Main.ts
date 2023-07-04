@@ -80,6 +80,7 @@ app.post("/:mortem", async (req, res) => {
 
     const webhookProfilePicture = "https://cdn.discordapp.com/avatars/1037833960673259581/df91181b3f1cf0ef1592fbe18e0962d7.png?size=128";
     const webhookName = "GitHub";
+    const arrangedRawEmbed = embed.toJSONRaw(true);
     
     for await (const webhook of webhooksMortem) {
       try {
@@ -91,7 +92,7 @@ app.post("/:mortem", async (req, res) => {
           body: JSON.stringify({
             username: webhookName,
             avatar_url: webhookProfilePicture,
-            embeds: embed.toJSONRaw(true)
+            embeds: arrangedRawEmbed
           })
         });
       } catch (error) {
