@@ -72,11 +72,10 @@ app.post("/:mortem", async (req, res) => {
     const embed = new EmbedBuilder()
     .setColor(embedColor)
     .setAuthor(body.sender.login, body.sender.avatar_url, body.sender.html_url)
-    .setTitle(`${body.commits.length} new ${body.commits.length <= 1 ? "commit" : "commits"}, presented by ${body.sender.login}`)
+    .setTitle(`${body.commits.length} new ${body.commits.length <= 1 ? "commit" : "commits"} on [${body.repository.name}:${body.ref.split("/")?.pop() || body.ref}], presented by ${body.sender.login}`)
     .setURL(body.compare)
     .setTimestamp(new Date())
-    .addField("Repository/Branches", `${body.repository.name}/${body.ref.split("/")?.pop() || body.ref}`)
-    .addField(`Commits [${body.commits.length}]`, commitsMap.join("\n"));
+    .setDescription(commitsMap.join("\n"))
 
     const webhookProfilePicture = "https://cdn.discordapp.com/avatars/1037833960673259581/df91181b3f1cf0ef1592fbe18e0962d7.png?size=128";
     const webhookName = "GitHub";
